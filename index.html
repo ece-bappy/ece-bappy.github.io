@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prospective PhD applicant Md. Azizul Hakim Bappy. Research interests include Information Security, LLM embedded systems, wearable authentication, and IoT. Seeking doctoral research opportunities in security, AI, and embedded systems.">
+    <title>Md. Azizul Hakim Bappy | Prospective PhD Applicant</title>
+    <style>
+        :root {
+            --primary-color: #5b21b6; /* Deep plum/purple from your CV */
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-main: #ffffff;
+            --bg-accent: #f9fafb;
+            --border-color: #e5e7eb;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            padding: 0 1rem;
+        }
+
+        /* Container & Grid Setup */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 0;
+        }
+
+        /* Header / Profile section */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-photo {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            min-width: 150px;
+        }
+
+        .profile-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            /* background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%); */
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px;
+            object-fit: cover;
+
+            position: relative;
+            z-index: 1;
+            display: block;
+        }
+
+        .header-text h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sticky Navigation for quick reading */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 0;
+            margin-bottom: 2.5rem;
+            z-index: 100;
+            height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.25rem;
+            list-style: none;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Typography & Section Styles */
+        section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 4.5rem; /* Prevents sticky nav from overlapping anchor targets */
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p, li {
+            font-size: 0.975rem;
+            color: var(--text-muted);
+        }
+
+        /* Education & Experience Items */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .timeline-time {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-details {
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Publications List */
+        ol.publications {
+            padding-left: 1.2rem;
+        }
+
+        ol.publications li {
+            margin-bottom: 1rem;
+            padding-left: 0.3rem;
+        }
+
+        .me {
+            font-weight: bold;
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-card {
+            background-color: var(--bg-accent);
+            padding: 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(91, 33, 182, 0.08);
+        }
+
+        .gallery-card-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+            border: 1px dashed var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: center;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .gallery-preview-content {
+            position: relative;
+            max-width: min(90vw, 1000px);
+            max-height: min(90vh, 800px);
+            width: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #111827;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.35);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+        }
+
+        .gallery-preview-overlay.visible .gallery-preview-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-card-image img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-card-image span {
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+        }
+
+        .gallery-preview-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            z-index: 999;
+        }
+
+        .gallery-preview-overlay.visible {
+            display: flex;
+        }
+
+        .gallery-preview-content {
+            position: relative;
+            max-width: min(90vw, 1000px);
+            max-height: min(90vh, 800px);
+            width: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #111827;
+            box-shadow: 0 24px 80px rgba(15, 23, 42, 0.35);
+        }
+
+        .gallery-preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #111827;
+        }
+
+        .gallery-preview-caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1rem 1.25rem;
+            background: rgba(15, 23, 42, 0.78);
+            color: #f8fafc;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .gallery-preview-close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            border: 1px solid rgba(248, 250, 252, 0.35);
+            background: rgba(15, 23, 42, 0.75);
+            color: #f8fafc;
+            font-weight: 700;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+
+        .skills-card {
+            background-color: var(--bg-accent);
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .skills-card h4 {
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* References Grid */
+        .references-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .reference-card p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+
+            .references-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- HEADER -->
+    <header>
+        <!-- Place a clean professional portrait image as profile.jpg in your repository -->
+        <div class="profile-photo">
+            <div class="profile-placeholder">AB</div>
+            <img src="profile-pic.png" alt="Md. Azizul Hakim Bappy" class="profile-pic" onerror="this.style.display='none'">
+        </div>
+        <div class="header-text">
+            <h1>Md. Azizul Hakim Bappy</h1>
+            <p>Postgraduate Research Fellow at Bangladesh University of Engineering and Technology (BUET)</p>
+            <div class="social-links">
+                <a href="mailto:ece.bappy@gmail.com">ece.bappy@gmail.com</a>
+                <a href="https://github.com/ece-bappy" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/bappy-ece" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://www.researchgate.net/profile/Md-Azizul-Bappy" target="_blank" rel="noopener">ResearchGate</a>
+                <a href="https://huggingface.co/floxihunter" target="_blank" rel="noopener">Hugging Face</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- MAIN SECTIONS -->
+    <main>
+        
+        <!-- ABOUT / RESEARCH STATEMENT -->
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                I am a research-focused engineer with a strong foundation in information security, embedded AI, and wearable authentication. My goal is to pursue doctoral research that bridges secure systems and intelligent edge computing for human-centered applications.
+            </p>
+            <ul style="margin-top: 1rem; padding-left: 1.2rem; color: var(--text-muted); font-size: 0.98rem;">
+                <li>Current research: lightweight security protocols for wearable and edge AI systems</li>
+                <li>Academic strengths: machine learning, computer vision, embedded systems, and applied cryptography</li>
+                <li>Seeking PhD opportunities in the areas of cybersecurity, intelligent IoT, and trusted AI</li>
+            </ul>
+            <h3 style="margin-top: 1.5rem;">Research Interests</h3>
+            <p>
+                <strong>Information Security</strong>, <strong>LLM Embedded Systems</strong>, <strong>Wearable Authentication</strong>, <strong>IoT-enabled Intelligent Systems</strong>, and <strong>Data-efficient AI</strong>.
+            </p>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>M.Sc. in Information and Communication Technology</span>
+                    <span class="timeline-time">Expected 2026</span>
+                </div>
+                <div class="timeline-details">
+                    Bangladesh University of Engineering and Technology (BUET), Dhaka<br>
+                    <strong>Result:</strong> 3.59/4.00 | <em>Thesis Topic:</em> Wearable Authentication Systems
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>B.Sc. in Electronics and Communication Engineering</span>
+                    <span class="timeline-time">2023</span>
+                </div>
+                <div class="timeline-details">
+                    Hajee Mohammad Danesh Science and Technology University (HSTU), Dinajpur<br>
+                    <strong>Result:</strong> 3.43/4.00 | <em>Thesis Topic:</em> Effectiveness of IoT Automation in Poultry
+                </div>
+            </div>
+        </section>
+
+        <!-- RESEARCH & WORK EXPERIENCE -->
+        <section id="experience">
+            <h2>Research & Professional Experience</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Postgraduate Research Fellow</span>
+                    <span class="timeline-time">Oct 2024 – Present</span>
+                </div>
+                <div class="timeline-details">
+                    <em>Institute of Information and Communication Technology, BUET, Dhaka</em><br>
+                    Supervisor: <a href="https://hossenmustafa.buet.ac.bd/" target="_blank" rel="noopener">Prof. Dr. Hossen Asiful Mustafa</a><br>
+                    Research: Design and development of secure, lightweight protocols for wearable authentication systems.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Undergraduate Research Assistant</span>
+                    <span class="timeline-time">2020 – 2024</span>
+                </div>
+                <div class="timeline-details">
+                    <em>Dept. of Electronics and Communication Engineering, HSTU, Dinajpur</em><br>
+                    Supervisor: <a href="https://hstu.ac.bd/teacher/mahabub" target="_blank" rel="noopener">Prof. Dr. Md. Mahabub Hossain</a><br>
+                    Research: Developed custom IoT-based hardware systems for agricultural poultry automated regulation.
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Officer (IT)</span>
+                    <span class="timeline-time">Mar 2024 – Oct 2024</span>
+                </div>
+                <div class="timeline-details">
+                    <em>ALOHA Bangladesh</em><br>
+                    Managed company databases, automated internal report generation workflows, and conducted data analysis for strategic decision-making.
+                </div>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS -->
+        <section id="publications">
+            <h2>Research Publications</h2>
+
+            <h3>Journal Articles</h3>
+            <ol class="publications">
+                <li>
+                    <span class="me">M. A. H. Bappy</span>, M. Hoshen, and M. Rafid. "Low-cost iot-based climate control automation for poultry farms," <em>Cureus Journal of Engineering</em>, vol. 2, eS44388-025-09291–2, 2025. <a href="https://doi.org/10.7759/s44388-025-09291-2" target="_blank" rel="noopener">doi:10.7759/s44388-025-09291-2</a>
+                </li>
+                <li>
+                    M. R. Zaman, <span class="me">M. A. H. Bappy</span>, M. M. Hossain, and M. S. Hossain. "Data-efficient deep learning framework for real-time avian pox identification in broiler chickens," <em>Smart Agricultural Technology</em>, vol. 12, p. 101246, 2025. <a href="https://doi.org/10.1016/j.atech.2025.101246" target="_blank" rel="noopener">doi:10.1016/j.atech.2025.101246</a>
+                </li>
+            </ol>
+
+            <h3>Conference Proceedings</h3>
+            <ol class="publications">
+                <li>
+                    M. H. Rifat, <span class="me">M. A. H. Bappy</span>, et al. "Pioneering bdsl interpretation: Designing an advanced sensor-based data glove for real-time bangla language interpretation," in <em>PECCII 2026</em>, Accepted, 2026.
+                </li>
+                <li>
+                    M. Aktaruzzaman, M. S. Islam, <span class="me">M. A. H. Bappy</span>, et al. "A self-improving robotic system for medical waste management using federated continual learning," in <em>IEEE COMPAS 2025</em>, 2025. <a href="https://doi.org/10.1109/COMPAS67506.2025.11381841" target="_blank" rel="noopener">doi:10.1109/COMPAS67506.2025.11381841</a>
+                </li>
+                <li>
+                    <span class="me">M. A. H. Bappy</span> et al. "Fine tuned slm for accurate and private cwe detection in python code," in <em>28th International Conference on Computer and Information Technology (ICCIT)</em>, 2025. <a href="https://doi.org/10.1109/ICCIT68739.2025.11491733" target="_blank" rel="noopener">doi:10.1109/ICCIT68739.2025.11491733</a>
+                </li>
+                <li>
+                    <span class="me">M. A. H. Bappy</span>, H. A. Mustafa, et al. "Less is more: Minimalist linear interpolation for finger joint angle estimation," in <em>16th International Conference on Computer and Communication Technology (ICCCTN)</em>, In press/Accepted, 2025.
+                </li>
+                <li>
+                    M. M. Rafid, M. H. Anik, <span class="me">M. A. H. Bappy</span>, et al. "An empirically-validated vision-based reactive control framework for low-cost robotic ground object manipulator," in <em>IEEE COMPAS 2025</em>, 2025. <a href="https://doi.org/10.1109/COMPAS67506.2025.11381629" target="_blank" rel="noopener">doi:10.1109/COMPAS67506.2025.11381629</a>
+                </li>
+            </ol>
+
+            <h3>Posters & Patents</h3>
+            <ol class="publications">
+                <li>
+                    <span class="me">M. A. H. Bappy</span> and H. A. Mustafa. "Tap your rhythm, reveal your identity: User-authentication on wearables," <em>IICT Student Poster Competition (2nd Runner Up)</em>, BUET, Dhaka, 2026. <a href="https://iict.buet.ac.bd/?p=3633" target="_blank" rel="noopener">View poster</a>
+                </li>
+                <li>
+                    <span class="me">M. A. H. Bappy</span> and H. A. Mustafa. "Finger joint angle estimation methods for 3d printed hand in computer vision," <em>IICT Student Poster Competition (1st Runner Up)</em>, BUET, Dhaka, 2025. <a href="https://iict.buet.ac.bd/?p=3100" target="_blank" rel="noopener">View poster</a>
+                </li>
+                <li>
+                    M. M. Hossain, M. R. Hoshen, <span class="me">M. A. H. Bappy</span>, et al. "Smart poultry feeder (spf)," <em>Patent submitted to DPDT</em>, Bangladesh, 2025.
+                </li>
+            </ol>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2>Selected Projects</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>LLM-Based Structured Prompt Builder for Research Data Extraction</span>
+                    <span><a href="https://github.com/ece-bappy" target="_blank" rel="noopener">Code</a></span>
+                </div>
+                <p>Designed a structured orchestration system to prompt Large Language Models to pull and structure critical experimental datasets from academic texts.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Synthetic CWE Dataset Generation using LLMs</span>
+                    <span><a href="https://github.com/ece-bappy" target="_blank" rel="noopener">Code</a></span>
+                </div>
+                <p>Created a targeted generation pipeline leveraging LLMs to simulate Python code bases containing specific, edge-case security weaknesses (CWEs) for training small language models (SLMs).</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span>Automated Educational Video Generation Pipeline (AI2Video)</span>
+                    <span><a href="https://github.com/ece-bappy" target="_blank" rel="noopener">Code</a></span>
+                </div>
+                <p>Built an end-to-end framework integrating text-to-speech, asset assembly, and timing alignment to systematically turn academic scripts into educational video layouts.</p>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <p>Highlighted projects, research demonstrations, prototypes, and academic works.</p>
+            <div class="gallery-grid">
+                <div class="gallery-card" data-title="Wearable Authentication Prototype">
+                    <div class="gallery-card-image">
+                        <img src="gallery-wearable-auth.jpg" alt="Wearable Authentication Prototype" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Wearable Authentication Prototype</h3>
+                </div>
+                <div class="gallery-card" data-title="SLM Dataset Snippet">
+                    <div class="gallery-card-image">
+                        <img src="gallery-slm-dataset.jpg" alt="SLM Dataset Snippet" onerror="this.style.display='none'">
+                    </div>
+                    <h3>SLM Dataset Snippet</h3>
+                </div>
+                <div class="gallery-card" data-title="Robotic Hand">
+                    <div class="gallery-card-image">
+                        <img src="gallery-robotic-hand.jpg" alt="Robotic Hand" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Robotic Hand</h3>
+                </div>
+                <div class="gallery-card" data-title="Data Gloves">
+                    <div class="gallery-card-image">
+                        <img src="gallery-data-gloves.jpg" alt="Data Gloves" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Data Gloves</h3>
+                </div>
+                <div class="gallery-card" data-title="IoT Poultry System">
+                    <div class="gallery-card-image">
+                        <img src="gallery-iot-poultry.jpg" alt="IoT in Poultry" onerror="this.style.display='none'">
+                    </div>
+                    <h3>IoT in Poultry</h3>
+                </div>
+                <div class="gallery-card" data-title="Smart Bangladesh Award 2023">
+                    <div class="gallery-card-image">
+                        <img src="gallery-smart-bangladesh.jpg" alt="Smart Bangladesh Award 2023" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Smart Bangladesh Award 2023</h3>
+                </div>
+
+                <div class="gallery-card" data-title="Poultry Robotic Manipulator">
+                    <div class="gallery-card-image">
+                        <img src="gallery-poultry-robotic.jpg" alt="Poultry Robotic Manipulator" onerror="this.style.display='none'">
+                    </div>
+                    <h3>Poultry Robotic Manipulator</h3>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section id="skills">
+            <h2>Technical & Research Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-card">
+                    <h4>LLM Ops & AI</h4>
+                    <p>Hugging Face, LoRA, PEFT, VLM, prompt engineering</p>
+                </div>
+                <div class="skills-card">
+                    <h4>ML & CV</h4>
+                    <p>PyTorch, TensorFlow, Keras, OpenCV, MediaPipe, YOLO, SSD</p>
+                </div>
+                <div class="skills-card">
+                    <h4>Programming</h4>
+                    <p>Python, C/C++, JavaScript, SQL, LaTeX, MATLAB</p>
+                </div>
+                <div class="skills-card">
+                    <h4>Embedded Systems</h4>
+                    <p>Arduino, ESP32, STM32, NVIDIA Jetson, Raspberry Pi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HONORS & AWARDS -->
+        <section id="awards">
+            <h2>Honors & Awards</h2>
+            <ul style="padding-left: 1.2rem; font-size: 0.95rem; color: var(--text-muted);">
+                <li style="margin-bottom: 0.4rem;"><strong>2026</strong>: Best Poster, 2nd Runner Up, IICT Poster Presentation, BUET. <a href="https://iict.buet.ac.bd/?p=3633" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">View poster</a></li>
+                <li style="margin-bottom: 0.4rem;"><strong>2025</strong>: Best Poster, 1st Runner Up, IICT Poster Presentation, BUET. <a href="https://iict.buet.ac.bd/?p=3100" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">View poster</a></li>
+                <li style="margin-bottom: 0.4rem;"><strong>2024</strong>: BUET Postgraduate Research Fellowship.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>2023</strong>: Smart Bangladesh Award, presented by the Hon. Prime Minister of Bangladesh.</li>
+                <li style="margin-bottom: 0.4rem;"><strong>2022</strong>: Top Earner Award (LEDP).</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <div class="gallery-preview-overlay" id="galleryPreview">
+        <div class="gallery-preview-content">
+            <img class="gallery-preview-image" id="galleryPreviewImage" src="" alt="Preview">
+            <div class="gallery-preview-caption" id="galleryPreviewCaption"></div>
+            <div class="gallery-preview-close" id="galleryPreviewClose">×</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+</div>
+
+<script>
+    const previewOverlay = document.getElementById('galleryPreview');
+    const previewImage = document.getElementById('galleryPreviewImage');
+    const previewCaption = document.getElementById('galleryPreviewCaption');
+    const previewClose = document.getElementById('galleryPreviewClose');
+    let previewTimeout;
+
+    function openPreview(src, caption) {
+        previewImage.src = src;
+        previewCaption.textContent = caption;
+        previewOverlay.classList.add('visible');
+    }
+
+    function closePreview() {
+        previewOverlay.classList.remove('visible');
+        previewImage.src = '';
+    }
+
+    document.querySelectorAll('.gallery-card').forEach(card => {
+        const img = card.querySelector('img');
+        const caption = card.dataset.title || card.querySelector('h3')?.textContent || 'Image preview';
+
+        if (!img) return;
+
+        img.addEventListener('error', () => {
+            img.style.display = 'none';
+            const placeholderText = img.parentElement.querySelector('span');
+            if (placeholderText) placeholderText.textContent = 'Image not found';
+        });
+
+        card.addEventListener('click', () => {
+            if (img.naturalWidth > 0) {
+                openPreview(img.src, caption);
+            }
+        });
+    });
+
+    previewClose.addEventListener('click', closePreview);
+    previewOverlay.addEventListener('click', event => {
+        if (event.target === previewOverlay) closePreview();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') closePreview();
+    });
+</script>
+
+</body>
+</html>
